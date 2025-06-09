@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  pixark:
+    image: ghcr.io/YOUR_USERNAME/pixark-server:latest
+    ports:
+      - "27015:27015/udp"
+      - "27016:27016/udp"
+      - "7777:7777/udp"
+      - "7778:7778/udp"
+    environment:
+      SESSION_NAME: "GreaseArk"
+      MAX_PLAYERS: "20"
+      SERVER_PASSWORD: ""
+      ADMIN_PASSWORD: "supersecret"
+    volumes:
+      - pixark_data:/pixark
+    restart: unless-stopped
+
+volumes:
+  pixark_data:
