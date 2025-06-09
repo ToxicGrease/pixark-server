@@ -14,4 +14,4 @@ docker run -d \
   -e MAX_PLAYERS=20 \
   -e SERVER_PASSWORD="" \
   -e ADMIN_PASSWORD="supersecret" \
-  ghcr.io/ToxicGrease/pixark-server:latest
+  ghcr.io/toxicgrease/pixark-server:latest

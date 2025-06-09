@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   pixark:
-    image: ghcr.io/ToxicGrease/pixark-server:latest
+    image: ghcr.io/toxicgrease/pixark-server:latest
     ports:
       - "27015:27015/udp"
       - "27016:27016/udp"
@@ -11,7 +11,7 @@ services:
     environment:
       SESSION_NAME: "GreaseArk"
       MAX_PLAYERS: "4"
-      SERVER_PASSWORD: "Sevenpotato$"
+      SERVER_PASSWORD: "Sevenpotato"
       ADMIN_PASSWORD: "supersecret"
     volumes:
     #Make sure to update this location data IE - /server/location/for/pixark_data/:pixark_data
