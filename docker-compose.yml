@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   pixark:
-    image: ghcr.io/YOUR_USERNAME/pixark-server:latest
+    image: ghcr.io/ToxicGrease/pixark-server:latest
     ports:
       - "27015:27015/udp"
       - "27016:27016/udp"
@@ -14,8 +14,8 @@ services:
       SERVER_PASSWORD: ""
       ADMIN_PASSWORD: "supersecret"
     volumes:
-      - pixark_data:/pixark
+    #Make sure to update this location data IE - /server/location/for/pixark_data/:pixark_data
+      - ./pixark_server/pixark_data/:pixark_data
     restart: unless-stopped
-
-volumes:
-  pixark_data:
+    tty: true
+    stdin_open: true
