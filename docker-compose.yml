@@ -15,7 +15,7 @@ services:
       ADMIN_PASSWORD: "supersecret"
     volumes:
     #Make sure to update this location data IE - /server/location/for/pixark_data/:pixark_data
-      - ./pixark_server/pixark_data/:pixark_data
+      - ./pixark/pixark_data/:pixark_data
     restart: unless-stopped
     tty: true
     stdin_open: true
