@@ -1,6 +1,6 @@
 FROM cm2network/steamcmd:latest
 
-ENV PIXARK_DIR="/pixark"
+ENV PIXARK_DIR=/home/steam/pixark
 
 RUN mkdir -p ${PIXARK_DIR}
 
