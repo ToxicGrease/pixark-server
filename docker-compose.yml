@@ -10,8 +10,8 @@ services:
       - "7778:7778/udp"
     environment:
       SESSION_NAME: "GreaseArk"
-      MAX_PLAYERS: "20"
-      SERVER_PASSWORD: ""
+      MAX_PLAYERS: "4"
+      SERVER_PASSWORD: "Sevenpotato$"
       ADMIN_PASSWORD: "supersecret"
     volumes:
     #Make sure to update this location data IE - /server/location/for/pixark_data/:pixark_data
@@ -19,3 +19,15 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
+    #The Networking Config is not really necessary for most people's use case. I am using Portainer to host my docker services.
+    networks:
+      pixark_server:
+        ipv4_address: 10.100.33.6
+
+networks:
+  pixark_server:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.100.33.0/24
+         gateway: 10.100.33.1
